@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle Financeiro</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Controle Financeiro</h1>
+      <p>Gerencie suas receitas e despesas</p>
+    </header>
+
+    <!-- Saldo -->
+    <section class="saldo-container">
+      <span>Saldo total</span>
+      <strong id="saldo">R$ 0,00</strong>
+    </section>
+
+    <!-- Formulário -->
+    <section class="card">
+      <h2>Nova transação</h2>
+
+      <form id="form-transacao">
+        <div class="form-group">
+          <label for="nome">Nome da transação</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex: Salário" required>
+        </div>
+        <div class="form-group">
+          <label for="valor">Valor</label>
+          <input type="number" id="valor" name="valor" step="0.01" placeholder="Ex: 1500 ou -200" required>
+          <small>
+            Use valores positivos para receitas e negativos para despesas.
+          </small>
+        </div>
+        <button type="submit" class="btn btn-adicionar">
+          Adicionar transação
+        </button>
+      </form>
+    </section>
+
+    <!-- Lista de transações -->
+    <section class="card">
+      <div class="transacoes-header">
+        <h2>Transações</h2>
+      </div>
+
+      <div id="lista-transacoes" class="lista-transacoes">
+
+        <!--
+            As transações serão adicionadas aqui
+            posteriormente pelo JavaScript.
+
+            Exemplo:
+
+            <div class="transacao">
+                <div class="transacao-info">
+                    <h3>Salário</h3>
+                    <span class="valor positivo">R$ 3.000,00</span>
+                </div>
+                <div class="acoes">
+                    <button class="btn-editar" data-id="1">Editar</button>
+                    <button class="btn-excluir" data-id="1">Excluir</button>
+                </div>
+
+                <form id="form-edicao-transacao">
+
+                    <div class="form-group">
+                        <label for="nome-edicao">Nome</label>
+                        <input type="text" id="nome-edicao">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="valor-edicao">Valor</label>
+                        <input type="number" id="valor-edicao" step="0.01">
+                    </div>
+
+                    <div class="form-edicao-acoes">
+                        <button type="submit" class="btn-salvar-edicao">
+                        Salvar
+                        </button>
+
+                        <button type="button" class="btn-cancelar">
+                        Cancelar
+                        </button>
+                    </div>
+
+                </form>
+            </div
+        -->
+
+        <p class="lista-vazia">
+          Nenhuma transação cadastrada.
+        </p>
+      </div>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

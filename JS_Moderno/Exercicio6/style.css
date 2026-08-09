@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.header p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Saldo */
+
+.saldo-container {
+  background-color: #111827;
+  color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saldo-container span {
+  font-size: 18px;
+}
+
+.saldo-container strong {
+  font-size: 28px;
+}
+
+/* Cards */
+
+.card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+/* Formulários */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #2563eb;
+}
+
+.form-group small {
+  display: block;
+  color: #6b7280;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+/* Botões gerais */
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+/* Botão adicionar */
+
+.btn-adicionar {
+  width: 100%;
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-adicionar:hover {
+  background-color: #1d4ed8;
+}
+
+/* Lista de transações */
+
+.transacoes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista-transacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lista-vazia {
+  text-align: center;
+  color: #9ca3af;
+  padding: 25px 0;
+}
+
+/* Transação */
+
+.transacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 16px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.transacao-info h3 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+/* Valores */
+
+.valor {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.valor.positivo {
+  color: #16a34a;
+}
+
+.valor.negativo {
+  color: #dc2626;
+}
+
+/* Ações da transação */
+
+.acoes {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-editar,
+.btn-excluir {
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.btn-editar {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+
+.btn-editar:hover {
+  background-color: #d97706;
+}
+
+.btn-excluir {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.btn-excluir:hover {
+  background-color: #dc2626;
+}
+
+/* Formulário de edição */
+
+#form-edicao-transacao {
+  width: 100%;
+  margin-top: 18px;
+  padding: 18px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background-color: #f9fafb;
+}
+
+#form-edicao-transacao .form-group {
+  margin-bottom: 15px;
+}
+
+#form-edicao-transacao label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+#form-edicao-transacao input {
+  width: 100%;
+  padding: 10px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  font-size: 15px;
+  outline: none;
+}
+
+#form-edicao-transacao input:focus {
+  border-color: #2563eb;
+}
+
+/* Botões do formulário de edição */
+
+.form-edicao-acoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-salvar-edicao {
+  flex: 1;
+  padding: 10px 14px;
+
+  border-radius: 6px;
+
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-salvar-edicao:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-cancelar {
+  flex: 1;
+  padding: 10px 14px;
+
+  border-radius: 6px;
+
+  background-color: #6b7280;
+  color: #ffffff;
+}
+
+.btn-cancelar:hover {
+  background-color: #4b5563;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 20px 12px;
+  }
+
+  .header h1 {
+    font-size: 27px;
+  }
+
+  .saldo-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .saldo-container strong {
+    font-size: 24px;
+  }
+
+  .transacao {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .acoes {
+    width: 100%;
+  }
+
+  .btn-editar,
+  .btn-excluir {
+    flex: 1;
+  }
+
+  .form-edicao-acoes {
+    width: 100%;
+  }
+
+}
